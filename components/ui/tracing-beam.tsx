@@ -1,44 +1,68 @@
-"use client"
-import type React from "react"
-import { useEffect, useRef, useState } from "react"
-import { motion, useTransform, useScroll, useSpring } from "framer-motion"
-import { cn } from "@/lib/utils"
+"use client";
+import type React from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
+import { motion, useTransform, useScroll, useSpring, useMotionValue } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 export const TracingBeam = ({
   children,
   className,
 }: {
-  children: React.ReactNode
-  className?: string
+  children: React.ReactNode;
+  className?: string;
 }) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const contentRef = useRef<HTMLDivElement>(null)
+  const ref = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
 
-  // Scroll tracking
   const { scrollYProgress } = useScroll({
-    target: ref, // This ensures that scroll tracking is relative to this element
+    target: ref,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const [svgHeight, setSvgHeight] = useState(0)
+  const [svgHeight, setSvgHeight] = useState(0);
 
-  // Update the SVG height when content is loaded or resized
   useEffect(() => {
-    if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight)
-    }
-  }, [])
+    if (!contentRef.current) return;
 
-  // Define the scroll-based transformations
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setSvgHeight(entry.contentRect.height);
+      }
+    });
+
+    resizeObserver.observe(contentRef.current);
+    setSvgHeight(contentRef.current.offsetHeight);
+
+    return () => resizeObserver.disconnect();
+  }, []);
+
   const y1 = useSpring(useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]), {
     stiffness: 500,
     damping: 90,
-  })
+  });
 
   const y2 = useSpring(useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]), {
     stiffness: 500,
     damping: 90,
-  })
+  });
+
+  const pathDefinition = useMemo(
+    () => `M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`,
+    [svgHeight]
+  );
+
+  // Motion values for animating styles
+  const boxShadow = useMotionValue("rgba(0, 0, 0, 0.24) 0px 3px 8px");
+  const backgroundColor = useMotionValue("var(--emerald-500)");
+  const borderColor = useMotionValue("var(--emerald-600)");
+
+  useEffect(() => {
+    return scrollYProgress.onChange((latest) => {
+      boxShadow.set(latest > 0 ? "none" : "rgba(0, 0, 0, 0.24) 0px 3px 8px");
+      backgroundColor.set(latest > 0 ? "white" : "var(--emerald-500)");
+      borderColor.set(latest > 0 ? "white" : "var(--emerald-600)");
+    });
+  }, [scrollYProgress, boxShadow, backgroundColor, borderColor]);
 
   return (
     <motion.div ref={ref} className={cn("relative w-full max-w-4xl mx-auto h-full", className)}>
@@ -48,21 +72,19 @@ export const TracingBeam = ({
             duration: 0.2,
             delay: 0.5,
           }}
-          animate={{
-            boxShadow: scrollYProgress.get() > 0 ? "none" : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-          }}
-          className="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
+          style={{ boxShadow: boxShadow.get() }}
+          className="ml-[27px] h-4 w-4 rounded-full border border-neutral-200 shadow-sm flex items-center justify-center"
         >
           <motion.div
             transition={{
               duration: 0.2,
               delay: 0.5,
             }}
-            animate={{
-              backgroundColor: scrollYProgress.get() > 0 ? "white" : "var(--emerald-500)",
-              borderColor: scrollYProgress.get() > 0 ? "white" : "var(--emerald-600)",
+            style={{
+              backgroundColor: backgroundColor.get(),
+              borderColor: borderColor.get(),
             }}
-            className="h-2 w-2  rounded-full border border-neutral-300 bg-white"
+            className="h-2 w-2 rounded-full border border-neutral-300 bg-white"
           />
         </motion.div>
         <svg
@@ -73,7 +95,7 @@ export const TracingBeam = ({
           aria-hidden="true"
         >
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={pathDefinition}
             fill="none"
             stroke="#9091A0"
             strokeOpacity="0.16"
@@ -81,10 +103,10 @@ export const TracingBeam = ({
             transition={{
               duration: 10,
             }}
-          ></motion.path>
+          />
 
           <motion.path
-            d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
+            d={pathDefinition}
             fill="none"
             stroke="url(#gradient)"
             strokeWidth="1.25"
@@ -92,25 +114,25 @@ export const TracingBeam = ({
             transition={{
               duration: 10,
             }}
-          ></motion.path>
+          />
           <defs>
             <motion.linearGradient
               id="gradient"
               gradientUnits="userSpaceOnUse"
               x1="0"
               x2="0"
-              y1={y1} // Set y1 for gradient
-              y2={y2} // Set y2 for gradient
+              y1={y1}
+              y2={y2}
             >
-              <stop stopColor="#18CCFC" stopOpacity="0"></stop>
-              <stop stopColor="#18CCFC"></stop>
-              <stop offset="0.325" stopColor="#6344F5"></stop>
-              <stop offset="1" stopColor="#AE48FF" stopOpacity="0"></stop>
+              <stop stopColor="#18CCFC" stopOpacity="0" />
+              <stop stopColor="#18CCFC" />
+              <stop offset="0.325" stopColor="#6344F5" />
+              <stop offset="1" stopColor="#AE48FF" stopOpacity="0" />
             </motion.linearGradient>
           </defs>
         </svg>
       </div>
       <div ref={contentRef}>{children}</div>
     </motion.div>
-  )
-}
+  );
+};

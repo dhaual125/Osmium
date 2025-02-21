@@ -28,15 +28,15 @@ export default function CompareDemo() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-your-image1.jpg" alt="Card 1" className="w-full h-40 object-cover rounded-md" />
+            <img src="/dhraval.jpeg" alt="Card 1" className="w-full h-40 object-cover rounded-md" />
             <p className="mt-2">Card 1 description</p>
           </div>
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-your-image2.jpg" alt="Card 2" className="w-full h-40 object-cover rounded-md" />
+            <img src="/suman.png" alt="Card 2" className="w-full h-40 object-cover rounded-md" />
             <p className="mt-2">Card 2 description</p>
           </div>
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/path-to-your-image3.jpg" alt="Card 3" className="w-full h-40 object-cover rounded-md" />
+            <img src="/varun.jpeg" alt="Card 3" className="w-full h-40 object-cover rounded-md" />
             <p className="mt-2">Card 3 description</p>
           </div>
         </div>
