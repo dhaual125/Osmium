@@ -1,4 +1,5 @@
 import { Compare } from "@/components/ui/compare";
+import Image from "next/image";
 
 export default function CompareDemo() {
   return (
@@ -12,31 +13,46 @@ export default function CompareDemo() {
           className="h-[50px] w-[200px] md:h-[400px] md:w-[400px]"
           slideMode="hover"
         />
-              <h1 className="text-2xl font-bold mb-4 text-white">Dark Mode: </h1>
-              <br /> 
-
+        <h1 className="text-2xl font-bold mb-4 text-white">Dark Mode: </h1>
+        <br />
         <p className="text-center md:text-left text-white max-w-xs">
           Enjoy a comfortable viewing experience with dark mode.
         </p>
       </div>
-      
-      {/* Cards Section */}
+
       <div className="w-full max-w-5xl mt-8">
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
           <h2 className="text-2xl font-bold text-white">Introduction to Mobile App</h2>
-          
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/dhraval.jpeg" alt="Card 1" className="w-full h-40 object-cover rounded-md" />
+            <Image
+              src="/dhraval.jpeg"
+              alt="Card 1"
+              className="w-full h-40 object-cover rounded-md"
+              width={400}
+              height={160}
+            />
             <p className="mt-2">Card 1 description</p>
           </div>
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/suman.png" alt="Card 2" className="w-full h-40 object-cover rounded-md" />
+            <Image
+              src="/suman.png"
+              alt="Card 2"
+              className="w-full h-40 object-cover rounded-md"
+              width={400}
+              height={160}
+            />
             <p className="mt-2">Card 2 description</p>
           </div>
           <div className="bg-gray-800 text-white p-4 rounded-lg shadow-lg">
-            <img src="/varun.jpeg" alt="Card 3" className="w-full h-40 object-cover rounded-md" />
+            <Image
+              src="/varun.jpeg"
+              alt="Card 3"
+              className="w-full h-40 object-cover rounded-md"
+              width={400}
+              height={160}
+            />
             <p className="mt-2">Card 3 description</p>
           </div>
         </div>
