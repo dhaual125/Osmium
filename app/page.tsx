@@ -1,10 +1,12 @@
 import AnimatedTestimonialsDemo from '@/components/animated-testimonials-demo'
 import CompareDemo from '@/components/compare-demo'
+
 import GoogleGeminiEffectDemo from '@/components/google-gemini-effect-demo'
 import TimelineDemo from '@/components/timeline-demo'
 
 import {TracingBeamDemo} from '@/components/tracing-beam-demo'
 import { MacbookScroll } from '@/components/ui/macbook-scroll'
+import WorldMapDemo from '@/components/world-map-demo'
 import React from 'react'
 
 function page() {
@@ -21,9 +23,15 @@ function page() {
 
       <CompareDemo/>
 
+      <WorldMapDemo/>
+
       <AnimatedTestimonialsDemo/>
+      
 
       <GoogleGeminiEffectDemo/>
+
+     
+      
       
 
 

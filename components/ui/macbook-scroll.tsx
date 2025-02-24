@@ -63,7 +63,7 @@ export const MacbookScroll = ({
     [0, 0.3],
     [0.6, isMobile ? 1 : 1.5]
   );
-  const translate = useTransform(scrollYProgress, [0, 0.5], [0, 700]); // Stops moving after 50% scroll
+  const translate = useTransform(scrollYProgress, [0, 0.5], [0, 525]); // Stops moving after 50% scroll
 
   const rotate = useTransform(scrollYProgress, [0.1, 0.12, 0.3], [-28, -28, 0]);
   const textTransform = useTransform(scrollYProgress, [0, 0.3], [0, 100]);
