@@ -46,32 +46,32 @@ const data = [
   {
     category: "Artificial Intelligence",
     title: "You can do more with AI.",
-    src: "/suman.JPEG",
+    src: "/ayushmaan.jpeg",
     content: <DummyContent />,
   },
   {
     category: "Productivity",
     title: "Enhance your productivity.",
-    src: "/varun.jpeg",
+    src: "/dhaual.JPEG",
     content: <DummyContent />,
   },
   {
     category: "Product",
     title: "Launching the new Apple Vision Pro.",
-    src: "/dhaual.JPEG",
+    src: "/dhraval.png",
     content: <DummyContent />,
   },
 
   {
     category: "Product",
     title: "Maps for your iPhone 15 Pro Max.",
-    src: "/ayushmaan.jpeg",
+    src: "/suman.JPEG",
     content: <DummyContent />,
   },
   {
     category: "iOS",
     title: "Photography just got better.",
-    src: "/dhaual.JPEG",
+    src: "/varun.jpeg",
     content: <DummyContent />,
   },
   {

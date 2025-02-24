@@ -1,11 +1,10 @@
 "use client"
-import React, { useEffect, useRef, useState, createContext, useContext } from "react"
+import React, { useEffect, useRef, useState, createContext, useContext, JSX } from "react"
 import { IconArrowNarrowLeft, IconArrowNarrowRight, IconX } from "@tabler/icons-react"
 import { cn } from "@/lib/utils"
 import { AnimatePresence, motion } from "framer-motion"
 import Image, { type ImageProps } from "next/image"
 import { useOutsideClick } from "@/hooks/use-outside-click"
-import { JSX } from "react/jsx-runtime"
 
 interface CarouselProps {
   items: JSX.Element[]
@@ -148,7 +147,7 @@ export const Card = ({
   layout?: boolean
 }) => {
   const [open, setOpen] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null!)
   const { onCardClose, currentIndex } = useContext(CarouselContext)
 
   useEffect(() => {
