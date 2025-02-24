@@ -19,46 +19,6 @@ export default function CompareDemo() {
         </p>
       </div>
 
-      <div className="w-full max-w-6xl mt-8">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-          <h2 className="text-3xl font-bold text-white">Introduction to Mobile App</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-[#1a1a2e] text-white p-4 rounded-3xl shadow-lg">
-            <div className="relative w-full h-[800px] overflow-hidden rounded-2xl">
-              <Image
-                src="/home.png"
-                alt="Card 1"
-                className="object-cover rounded-2xl"
-                fill
-              />
-            </div>
-            <p className="mt-2 text-center"> Course </p>
-          </div>
-          <div className="bg-[#1a1a2e] text-white p-4 rounded-3xl shadow-lg">
-            <div className="relative w-full h-[800px] overflow-hidden rounded-2xl">
-              <Image
-                src="/mock.png"
-                alt="Card 2"
-                className="object-cover rounded-2xl"
-                fill
-              />
-            </div>
-            <p className="mt-2 text-center">Mock Test</p>
-          </div>
-          <div className="bg-[#1a1a2e] text-white p-4 rounded-3xl shadow-lg">
-            <div className="relative w-full h-[800px] overflow-hidden rounded-2xl">
-              <Image
-                src="/course.png"
-                alt="Card 3"
-                className="object-cover rounded-2xl"
-                fill
-              />
-            </div>
-            <p className="mt-2 text-center">Basic Web Development</p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }

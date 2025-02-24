@@ -27,7 +27,7 @@ export const GoogleGeminiEffect = ({
       <p className="text-xs md:text-xl font-normal text-center text-neutral-400 mt-4 max-w-lg mx-auto">
         {description ||
           `
-OsmiumLLM redefines learning with AI-driven content curation and personalized insights. Built to enhance education, it adapts, predicts, and evolves with learners..`}
+OsmiumLLM redefines learning with AI-driven content curation and personalized insights.`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">

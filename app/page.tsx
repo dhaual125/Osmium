@@ -1,4 +1,5 @@
 import AnimatedTestimonialsDemo from '@/components/animated-testimonials-demo'
+import AppleCardsCarouselDemo from '@/components/apple-cards-carousel-demo'
 import CompareDemo from '@/components/compare-demo'
 
 import GoogleGeminiEffectDemo from '@/components/google-gemini-effect-demo'
@@ -22,6 +23,7 @@ function page() {
       <TimelineDemo/>
 
       <CompareDemo/>
+      <AppleCardsCarouselDemo/>
 
       <WorldMapDemo/>
 
