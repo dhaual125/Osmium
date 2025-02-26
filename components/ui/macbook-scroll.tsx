@@ -89,7 +89,7 @@ export const MacbookScroll = ({
       </motion.h2>
       {/* Lid */}
       <Lid
-        src={src ?? "/home-page.png"}
+        src={src ?? "/mock-test.png"}
         scaleX={scaleX}
         scaleY={scaleY}
         rotate={rotate}

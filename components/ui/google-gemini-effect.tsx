@@ -20,7 +20,7 @@ export const GoogleGeminiEffect = ({
   className?: string
 }) => {
   return (
-    <div className={cn("sticky top-80", className)}>
+    <div className={cn(" sticky top-80", className)}>
       <p className="text-lg md:text-7xl font-normal pb-4 text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-100 to-neutral-300">
         {title || `Powered with Osmium LLM`}
       </p>
@@ -30,9 +30,11 @@ export const GoogleGeminiEffect = ({
 OsmiumLLM redefines learning with AI-driven content curation and personalized insights.`}
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
-        <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-        <Link href="https://osmium.co.in/">Osmium</Link>
-        </button>
+      <button className="font-bold bg-[#C16A50] rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-32 mt-10 z-10 md:text-base text-white text-xs w-32 mx-auto">
+  <Link href="https://osmium.co.in/">Osmium</Link>
+</button>
+
+
        
       </div>
       <svg

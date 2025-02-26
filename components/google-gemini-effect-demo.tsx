@@ -32,7 +32,6 @@ export default function GoogleGeminiEffectDemo() {
         />
       </div>
 
-      {/* Footer Section */}
       <Footer />
     </div>
   );

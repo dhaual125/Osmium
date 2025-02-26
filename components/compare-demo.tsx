@@ -6,8 +6,8 @@ export default function CompareDemo() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-black">
       <div className="flex flex-col md:flex-row items-center gap-4">
         <Compare
-          firstImage="/dash-black.png"
-          secondImage="/desk-white.png"
+          firstImage="/Course-selection.png"
+          secondImage="/solution.png"
           firstImageClassName="object-cover object-left-top"
           secondImageClassname="object-cover object-left-top"
           className="h-[300px] w-[400px] md:h-[500px] md:w-[600px]"
