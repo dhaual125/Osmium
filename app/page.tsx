@@ -13,12 +13,7 @@ import React from 'react'
 function page() {
   return (
     <div>
-      
-      
-      <TracingBeamDemo/>
-
-      
-      <MacbookScroll/>
+       <MacbookScroll/>
 
       <TimelineDemo/>
 

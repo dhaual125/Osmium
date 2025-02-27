@@ -18,7 +18,13 @@ import {
   IconVolume,
   IconVolume2,
   IconVolume3,
+  // IconSearch,
+  // IconWorld,
+  // IconCommand,
+  // IconCaretLeftFilled,
+  // IconCaretDownFilled,
 } from "@tabler/icons-react";
+
 import { IconSearch } from "@tabler/icons-react";
 import { IconWorld } from "@tabler/icons-react";
 import { IconCommand } from "@tabler/icons-react";
@@ -26,6 +32,8 @@ import { IconCaretLeftFilled } from "@tabler/icons-react";
 import { IconCaretDownFilled } from "@tabler/icons-react";
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import Image from "next/image";
+import { TracingBeam } from "./tracing-beam";
+import { Cover } from "./cover";
 
 
 export const MacbookScroll = ({
@@ -48,10 +56,12 @@ export const MacbookScroll = ({
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    if (window && window.innerWidth < 768) {
-      setIsMobile(true);
-    }
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
+  
 
   const scaleX = useTransform(
     scrollYProgress,
@@ -82,9 +92,29 @@ export const MacbookScroll = ({
         className="dark:text-white text-neutral-800 text-3xl font-bold mb-20 text-center"
       >
         {title || (
-          <span>
-             The Dashboard That work as hard as you do
-          </span>
+        <TracingBeam className="px-6">
+              <div className="max-w-2xl mx-auto antialiased pt-4 relative">
+        
+                {/* Cover Section */}
+                <div className="text-center mb-12">
+                  <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6">
+                    <Cover className="text-black">
+                      Acclerate
+                    </Cover>
+                    <span className="bg-gradient-to-b from-white via-gray-300 to-gray-500 text-transparent bg-clip-text">
+                      Your learning
+                    </span>
+                    <br />
+                    <span className="bg-gradient-to-b from-white via-gray-300 to-gray-500 text-transparent bg-clip-text">
+                      Like never before <br /> <br />
+                    </span>
+                    <span className="text-[24px]">
+                      finding the best lectures, and giving you smart insights for better preparation.
+                    </span>
+                  </h1>
+                </div>
+              </div>
+            </TracingBeam>
         )}
       </motion.h2>
       {/* Lid */}
@@ -153,26 +183,31 @@ export const Lid = ({
           className="absolute inset-0 bg-[#010101] rounded-lg flex items-center justify-center"
         >
           <span className="text-white">
-            <AceternityLogo />
+ 
           </span>
         </div>
       </div>
       <motion.div
-        style={{
-          scaleX: scaleX,
-          scaleY: scaleY,
-          rotateX: rotate,
-          translateY: translate,
-          transformStyle: "preserve-3d",
-          transformOrigin: "top",
-        }}
-        className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
-      >
+  style={{
+    boxShadow: '0 4px 30px rgba(0, 0, 0, 0.2)',
+    scaleX: scaleX,
+    scaleY: scaleY,
+    rotateX: rotate,
+    translateY: translate,
+    transformStyle: "preserve-3d",
+    transformOrigin: "top",
+  }}
+  className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
+>
+
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
          {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={src}
-         alt="Your image" 
-        className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full" />
+         <img 
+  src={src} 
+  alt="MacBook with dynamic scrolling effect" 
+  className="object-cover object-left-top absolute rounded-lg inset-0 h-full w-full" 
+/>
+
 
       </motion.div>
     </div>
@@ -648,23 +683,3 @@ export const OptionKey = ({ className }: { className: string }) => {
   );
 };
 
-const AceternityLogo = () => {
-  return (
-    <svg
-      width="66"
-      height="65"
-      viewBox="0 0 66 65"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-3 w-3 text-white"
-    >
-      <path
-        d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-        stroke="currentColor"
-        strokeWidth="15"
-        strokeMiterlimit="3.86874"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-};
