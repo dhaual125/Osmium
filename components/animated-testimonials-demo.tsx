@@ -14,13 +14,13 @@ export default function AnimatedTestimonialsDemo() {
         "Varun is the architect behind Osmium’s robust and scalable backend infrastructure. Specializing in server-side logic, database management, and API development, he ensures the platform’s performance, security, and reliability.",
       name: "Varun Kumar",
       designation: "Co-Founder/Backend Developer",
-      src: "/varunji.jpg", 
+      src: "/varun.jpg", 
     },
     {
       quote:
         "Suman leads the design team with a focus on aesthetics, usability, and user-centric experiences. His expertise in UI/UX ensures that Osmium’s platform is not only visually appealing but also intuitive and accessible for learners of all backgrounds.",
       name: "Suman Yadav",
-      designation: "Co-Founder/Head of Designer",
+      designation: "Co-Founder/Head of Design",
       src: "/suman.JPEG",
     },
     {
@@ -34,7 +34,7 @@ export default function AnimatedTestimonialsDemo() {
       quote: "As the driving force behind Osmium, Ayushmaan combines technical expertise with a strategic vision to build a cutting-edge AI-driven learning platform. His commitment to innovation and excellence ensures that Osmium evolves to meet the needs of learners worldwide.  ",
       name: "Ayushmaan Soni",
       designation: "Co-Founder/CEO/Software Developer",
-      src: "/ayushmaan.jpeg",
+      src: "/Ayushmaan_.jpg",
     },
     {
       quote:

@@ -12,7 +12,7 @@ export default function TimelineDemo() {
           </p>
           <div className="grid grid-cols-1">
             <Image
-              src="/both-course.png"
+              src="/both-course-2.png"
               alt="startup template"
               width={500}
               height={500}
@@ -100,7 +100,7 @@ export default function TimelineDemo() {
           </div>
           <div className="grid grid-cols-1">
             <Image
-              src="/both-carrer-path.png"
+              src="/both-carrer.png"
               alt="hero template"
               width={500}
               height={500}

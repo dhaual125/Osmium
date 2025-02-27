@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <h2 className="text-2xl font-bold text-white">Osmium</h2>
             <p className="text-sm text-neutral-400 mt-2">
-              AI-powered learning for the future.
+              AI mentor personlised by you for you.
             </p>
           </div>
 
