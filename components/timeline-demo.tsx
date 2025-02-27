@@ -4,15 +4,14 @@ import { Timeline } from "@/components/ui/timeline"
 export default function TimelineDemo() {
   const data = [
     {
-      title: "Learn Anything with Osmium",
+      title: "Predict your Exams",
       content: (
         <div>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-          Osmium lets you learn any subject, from any field with a structured approach. It curates top YouTube lectures, provides topic overviews, and offers quizzes and notes for effective learning. With AI-driven insights, it makes education accessible, engaging, and efficient—anytime, anywhere
-          </p>
+          Osmium’s exam prediction feature analyzes a minimum of five years of past papers to identify trends in topics, difficulty, and marking schemes. It then generates **realistic mock tests, with an **almost 50% accuracy rate in predicting the actual exam pattern. This helps students focus on high-probability topics and practice effectively for better performance.          </p>
           <div className="grid grid-cols-1">
             <Image
-              src="/both-course-2.png"
+              src="/mock-trr.png"
               alt="startup template"
               width={500}
               height={500}
@@ -52,7 +51,7 @@ export default function TimelineDemo() {
           </p>
           <div className="grid grid-cols-1">
           <Image
-  src="/both-mock.png"
+  src="/both-course-2.png"
   alt="hero template"
   width={1200}
   height={1000}
