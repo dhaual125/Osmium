@@ -42,15 +42,16 @@ export const AnimatedTestimonials = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 5000);
-      return () => clearInterval(interval);
+      const interval = setInterval(handleNext, 5000)
+      return () => clearInterval(interval)
     }
-  }, [autoplay, handleNext]);
+  }, [autoplay, handleNext])
+
   return (
-    <div className="max-w-sm md:max-w-4xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-3xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
-        <div>
-          <div className="relative h-80 w-full">
+        <div className="relative flex justify-center items-center">
+          <div className="relative w-96 h-96"> {/* Increased size */}
             <AnimatePresence>
               {testimonials.map((testimonial, index) => (
                 <motion.div
@@ -79,15 +80,14 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom"
+                  className="absolute inset-0"
                 >
                   <Image
                     src={testimonial.src}
                     alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
+                    fill
+                    className="rounded-2xl object-cover"
+                    priority
                   />
                 </motion.div>
               ))}

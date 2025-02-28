@@ -14,34 +14,34 @@ export default function AnimatedTestimonialsDemo() {
         "Varun is the architect behind Osmium’s robust and scalable backend infrastructure. Specializing in server-side logic, database management, and API development, he ensures the platform’s performance, security, and reliability.",
       name: "Varun Kumar",
       designation: "Co-Founder/Backend Developer",
-      src: "/varun.jpg", 
+      src: "/var.jpg", 
     },
     {
       quote:
         "Suman leads the design team with a focus on aesthetics, usability, and user-centric experiences. His expertise in UI/UX ensures that Osmium’s platform is not only visually appealing but also intuitive and accessible for learners of all backgrounds.",
       name: "Suman Yadav",
       designation: "Co-Founder/Head of Design",
-      src: "/suman.JPEG",
+      src: "/suman.jpg",
     },
     {
       quote:
         "Swastik transforms designs into seamless, interactive, and high-performance user interfaces. His expertise in modern frontend frameworks ensures that Osmium delivers a smooth and engaging learning experience.",
       name: "Swastik Khatua",
       designation: "Co-Founder/Director/Frontend Developer",
-      src: "/swastik_.jpg",
+      src: "/swatik-r.jpg",
     },
     {
       quote: "As the driving force behind Osmium, Ayushmaan combines technical expertise with a strategic vision to build a cutting-edge AI-driven learning platform. His commitment to innovation and excellence ensures that Osmium evolves to meet the needs of learners worldwide.  ",
       name: "Ayushmaan Soni",
       designation: "Co-Founder/CEO/Software Developer",
-      src: "/Ayushmaan_.jpg",
+      src: "/soni.jpg",
     },
     {
       quote:
         "Dhraval is dedicated to crafting pixel-perfect, responsive, and dynamic web interfaces. His deep understanding of UI/UX principles and frontend technologies helps bring Osmium’s vision to life in the most user-friendly way.  ",
       name: "Dhraval Narsinha",
       designation: "Co-Founder/Frontend Developer",
-      src: "/dhaual.JPEG",
+      src: "/dhaual.jpg",
     },
   ];
 

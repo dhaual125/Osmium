@@ -14,7 +14,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'i.ytimg.com',  // YouTube Thumbnails
+        hostname: 'i.ytimg.com',
         pathname: '/vi/**'
       },
       {
@@ -22,8 +22,8 @@ const nextConfig = {
         hostname: 'fossbytes.com',
         pathname: '/wp-content/uploads/**'
       }
-    ],
-  },
+    ]
+  }
 }
 
 module.exports = nextConfig;
