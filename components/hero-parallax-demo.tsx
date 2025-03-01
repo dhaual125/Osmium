@@ -24,7 +24,7 @@ const Header = () => {
   return (
     <header className="w-full fixed top-0 left-0 bg-black/60 backdrop-blur-md shadow-md z-40 flex items-center justify-between px-6 py-3 h-16">
       <div className="text-lg font-semibold text-white">
-      <svg xmlns="http://www.w3.org/2000/svg" width="120" height="32" viewBox="0 0 120 32" fill="none">
+      <svg xmlns="http://www.w3.org/2000/svg" width="80"  viewBox="0 0 120 32" fill="none">
 <path d="M5.96579 5.39023C15.8014 3.04527 19.1759 18.8913 9.47525 21.4678C-0.513205 24.1207 -4.0286 7.77246 5.96579 5.39023ZM9.4362 21.0987C15.8201 19.0874 12.4015 4.07978 6.03201 5.73004C-0.694026 7.47168 2.8443 23.1758 9.4362 21.0987Z" fill="white"/>
 <path d="M18.0147 8.04426C18.9426 3.75004 28.1432 4.47137 30.0329 7.04967C31.0559 8.58104 29.0838 9.59781 28.2867 8.00168C26.2832 3.99137 20.5352 4.52371 20.5097 8.76381C20.4723 15.1421 30.3309 14.2664 30.6246 18.6742C30.8275 21.7183 26.1406 22.398 23.3247 21.8922C21.0683 21.4868 19.4299 20.3857 18.1412 19.0034L18.4536 18.739C20.0182 20.3609 22.149 21.4948 24.0446 21.4948C26.1279 21.4948 28.0736 20.6253 28.1127 19.0664C28.2408 14.0056 16.9051 13.176 18.0138 8.04604L18.0147 8.04426Z" fill="white"/>
 <path d="M42.5985 5.75034C38.8012 5.71396 36.9998 18.4875 36.6084 21.7126H34.1016V5.16477H36.5431V19.3375C37.1085 15.8666 38.7333 4.27043 43.6036 5.07072C46.242 5.50458 46.7472 7.73065 46.7472 9.98689V19.3375C47.248 15.8666 48.9374 4.27043 53.8077 5.07072C56.4461 5.50458 56.9512 7.73065 56.9512 9.98689V21.7126H54.5097V10.3187C54.5097 8.80243 54.6608 5.76897 52.8025 5.75123C49.0919 5.71574 47.2107 17.9605 46.8626 21.7135H44.3056V10.3196C44.3056 8.80332 44.4568 5.76986 42.5985 5.75212V5.75034Z" fill="white"/>
@@ -40,77 +40,77 @@ const Header = () => {
 
 export const products = [
   {
-    title: "h",
+    title: "home",
     link: "",
     thumbnail: "/home-page.png",
   },
   {
-    title: "m",
+    title: "quiz",
     link: "",
-    thumbnail: "/premium.png",
+    thumbnail: "/dash-quiz.png",
   },
   {
-    title: "V",
+    title: "Course",
     link: "",
     thumbnail: "/Course-selection.png",
   },
   {
-    title: "E",
+    title: "lOGIN",
     link: "",
     thumbnail: "/Login.png",
   },
   {
-    title: "C",
+    title: "Search",
     link: "",
     thumbnail: "/search.png",
   },
   {
-    title: "H",
+    title: "course",
     link: "",
     thumbnail: "/course-2.png",
   },
   {
-    title: "T",
+    title: "question",
     link: "",
     thumbnail: "/ww.png",
   },
   {
-    title: "E",
+    title: "jee",
     link: "",
     thumbnail: "/jee.png",
   },
   {
-    title: "N",
+    title: "neet",
     link: "",
     thumbnail: "/je.png",
   },
   {
-    title: "A",
+    title: "Carrer",
     link: "",
     thumbnail: "/carrer-path.png",
   },
   {
-    title: "u",
+    title: "cloud",
     link: "",
     thumbnail: "/Cloud.png",
   },
   {
-    title: "L",
+    title: "dash",
     link: "",
     thumbnail: "/dash-black.png",
   },
   {
-    title: "o",
+    title: "paper",
     link: "",
     thumbnail: "/ww.png",
   },
   {
-    title: "y",
+    title: "solution",
     link: "",
     thumbnail: "/ww.png",
   },
   {
-    title: "i",
+    title: "mock",
     link: "",
     thumbnail: "/mock-trr.png",
   },

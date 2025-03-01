@@ -34,7 +34,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="h-[300vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] py-40 mb-10 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <CoverDemo />
       <motion.div
@@ -69,7 +69,7 @@ export const CoverDemo = () => {
   return (
     <div>
       <h1 className="text-4xl md:text-4xl lg:text-6xl font-semibold max-w-7xl mx-auto text-center mt-6 relative z-20 py-6">
-        <Cover className="text-black">Acclerate</Cover>
+        <Cover className="text-[#ffa589]">Acclerate</Cover>
         <span className="bg-gradient-to-b from-white via-gray-300 to-gray-500 text-transparent bg-clip-text">
           Your learning
         </span>

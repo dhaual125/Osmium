@@ -43,7 +43,7 @@ const data = [
   {
     category: "Carrer Path",
     title: "",
-    src: "/carrer-path-a.png",
+    src: "/carrier-a.png",
     content: "",
   },
   {

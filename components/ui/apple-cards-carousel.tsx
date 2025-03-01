@@ -61,7 +61,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
-      const cardWidth = isMobile() ? 230 : 384 // (md:w-96)
+      const cardWidth = isMobile() ? 230 : 384
       const gap = isMobile() ? 4 : 8
       const scrollPosition = (cardWidth + gap) * (index + 1)
       carouselRef.current.scrollTo({
@@ -89,7 +89,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
           <div
             className={cn(
               "flex flex-row justify-start gap-4 pl-4",
-              "max-w-7xl mx-auto", // remove max-w-4xl if you want the carousel to span the full width of its container
+              "max-w-7xl mx-auto",
             )}
           >
             {items.map((item, index) => (
@@ -170,7 +170,6 @@ export const Card = ({
   useOutsideClick(containerRef, () => handleClose())
 
   const handleOpen = () => {
-    setOpen(true)
   }
 
   const handleClose = () => {
@@ -220,9 +219,8 @@ export const Card = ({
           </div>
         )}
       </AnimatePresence>
-      <motion.button
+      <motion.div
         layoutId={layout ? `card-${card.title}` : undefined}
-        onClick={handleOpen}
         className="rounded-3xl bg-gray-100 dark:bg-neutral-900 h-80 w-56 md:h-[40rem] md:w-96 overflow-hidden flex flex-col items-start justify-start relative z-10"
       >
         <div className="absolute h-full top-0 inset-x-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-30 pointer-events-none" />
@@ -241,7 +239,7 @@ export const Card = ({
           </motion.p>
         </div>
         <BlurImage src={card.src} alt={card.title} fill className="object-cover absolute z-10 inset-0" />
-      </motion.button>
+      </motion.div>
     </>
   )
 }
@@ -263,4 +261,3 @@ export const BlurImage = ({ height, width, src, className, alt, ...rest }: Image
     />
   )
 }
-

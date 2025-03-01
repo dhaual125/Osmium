@@ -16,9 +16,9 @@ export default function AnimatedModalDemo() {
   return (
     <div className="py-1 flex items-center justify-center">
       <Modal>
-      <ModalTrigger className="bg-[#ffa589] text-white flex justify-center group/modal-btn px-4 py-2 text-lg rounded-lg">
+      <ModalTrigger className="bg-white text-black px-5 py-2 text-sm rounded-3xl shadow-[0px_4px_10px_rgba(139,90,74,0.5)] hover:shadow-[0px_6px_15px_rgba(139,90,74,0.7)] transition-all">
   <strong className="group-hover/modal-btn:translate-x-40 text-center transition duration-500 text-black z-20">
-    Get Start with
+    Get Started
   </strong>
   <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-black z-20">
     Osmium
@@ -68,24 +68,7 @@ export default function AnimatedModalDemo() {
 
                 <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
 
-                <div className="flex flex-col space-y-4">
-                  <button
-                    className="relative group/btn flex space-x-4 items-center justify-center px-4 w-full text-black rounded-lg h-14 text-lg font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)] transition duration-300 hover:scale-105"
-                    type="button"
-                  >
-                    <IconBrandGithub className="h-6 w-6 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-neutral-700 dark:text-neutral-300">Sign up with GitHub</span>
-                    <BottomGradient />
-                  </button>
-                  <button
-                    className="relative group/btn flex space-x-4 items-center justify-center px-4 w-full text-black rounded-lg h-14 text-lg font-medium shadow-input bg-gray-50 dark:bg-zinc-900 dark:shadow-[0px_0px_1px_1px_var(--neutral-800)] transition duration-300 hover:scale-105"
-                    type="button"
-                  >
-                    <IconBrandGoogle className="h-6 w-6 text-neutral-800 dark:text-neutral-300" />
-                    <span className="text-neutral-700 dark:text-neutral-300">Sign up with Google</span>
-                    <BottomGradient />
-                  </button>
-                </div>
+
               </form>
             </div>
           </ModalContent>
