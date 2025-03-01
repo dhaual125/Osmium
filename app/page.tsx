@@ -21,6 +21,14 @@ function page() {
       
 
       <HeroParallaxDemo/>
+
+      
+
+   
+
+      <AnimatedModalDemo/>
+
+      
       
     
        <MacbookScroll/>
@@ -36,6 +44,10 @@ function page() {
       
 
       <GoogleGeminiEffectDemo/>
+
+      
+
+      
 
       
 

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaTwitter, FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -30,11 +30,6 @@ export default function Footer() {
               <li>
                 <Link href="/about" className="hover:text-white">
                   About
-                </Link>
-              </li>
-              <li>
-                <Link href="/content" className="hover:text-white">
-                  Content
                 </Link>
               </li>
               <li>
@@ -71,7 +66,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="w-6 h-6 hover:text-white transition" />
+              <FaInstagram className="w-6 h-6 hover:text-white transition" />
             </a>
           </div>
         </div>
